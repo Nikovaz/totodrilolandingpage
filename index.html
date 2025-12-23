@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Totodrilo.tech - Automatización de Ventas con IA para E-commerce</title>
+    <meta name="description"
+        content="Automatizamos tu atención al cliente y ventas por WhatsApp con IA. Chatbots inteligentes para e-commerce que responden 24/7.">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/mobile-menu-fix.css">
+    <link rel="stylesheet" href="./css/contact-form.css">
+    <!-- EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+
+<body>
+    <!-- Fondo animado global -->
+    <div class="global-background">
+        <div class="geometric-shapes-global">
+            <!-- Formas geométricas globales -->
+            <div class="shape-global shape-global-1"></div>
+            <div class="shape-global shape-global-2"></div>
+            <div class="shape-global shape-global-3"></div>
+            <div class="shape-global shape-global-4"></div>
+
+            <!-- Panal de hexágonos -->
+            <div class="honeycomb">
+                <div class="honeycomb-cell cell-1"></div>
+                <div class="honeycomb-cell cell-2"></div>
+                <div class="honeycomb-cell cell-3"></div>
+                <div class="honeycomb-cell cell-4"></div>
+                <div class="honeycomb-cell cell-5"></div>
+                <div class="honeycomb-cell cell-6"></div>
+                <div class="honeycomb-cell cell-7"></div>
+                <div class="honeycomb-cell cell-8"></div>
+            </div>
+        </div>
+    </div>
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/5491130960114?text=Hola!%20Quiero%20información%20sobre%20automatización%20con%20IA"
+        class="whatsapp-float" target="_blank" title="Contactar por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <img src="./images/LogoTotodrilo-Photoroom.png" alt="Totodrilo.tech Logo" class="logo-img">
+                    <span class="logo-text">Totodrilo <span class="logo-accent">IA</span></span>
+                </div>
+                <div class="nav-menu" id="nav-menu">
+                    <a href="#inicio" class="nav-link">Inicio</a>
+                    <a href="#servicios" class="nav-link">Servicios</a>
+                    <a href="#casos-exito" class="nav-link">Casos de Éxito</a>
+                    <a href="#como-funciona" class="nav-link">Cómo Funciona</a>
+                    <a href="#contacto" class="nav-link">Contacto</a>
+                    <a href="https://wa.me/5491130960114?text=Hola!%20Quiero%20automatizar%20mi%20negocio"
+                        target="_blank" class="cta-button nav-cta">
+                        <i class="fab fa-whatsapp"></i> Demo Gratis
+                    </a>
+                </div>
+                <div class="nav-toggle" id="nav-toggle" role="button" aria-label="Abrir menú" aria-expanded="false"
+                    tabindex="0">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="hero-background">
+            <div class="geometric-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+
+                <!-- Triángulos animados -->
+                <div class="triangle triangle-1"></div>
+                <div class="triangle triangle-2"></div>
+                <div class="triangle triangle-3"></div>
+                <div class="triangle triangle-4"></div>
+                <div class="triangle triangle-5"></div>
+                <div class="triangle triangle-6"></div>
+
+                <!-- Líneas de circuito -->
+                <div class="circuit-line line-1"></div>
+                <div class="circuit-line line-2"></div>
+                <div class="circuit-line line-3"></div>
+
+                <!-- Círculos orbitales -->
+                <div class="orbital-circle circle-1"></div>
+                <div class="orbital-circle circle-2"></div>
+
+                <!-- Hexágonos tecnológicos -->
+                <div class="hexagon hex-1"></div>
+                <div class="hexagon hex-2"></div>
+                <div class="hexagon hex-3"></div>
+
+                <!-- Puntos de conexión -->
+                <div class="dot dot-1"></div>
+                <div class="dot dot-2"></div>
+                <div class="dot dot-3"></div>
+                <div class="dot dot-4"></div>
+                <div class="dot dot-5"></div>
+
+                <!-- Floating 3D Shapes -->
+                <div class="floating-shape shape-cube" style="top: 15%; left: 10%; animation-duration: 25s;"></div>
+                <div class="floating-shape shape-cube"
+                    style="bottom: 20%; right: 5%; animation-duration: 30s; border-color: var(--accent);"></div>
+                <div class="floating-shape shape-pyramid" style="top: 40%; right: 15%;"></div>
+                <div class="floating-shape shape-pyramid" style="bottom: 10%; left: 20%; transform: rotate(180deg);">
+                </div>
+            </div>
+        </div>
+        <div class="hero-content">
+            <div class="container">
+                <div class="hero-text-wrapper">
+                    <!-- Logo grande del Totodrilo -->
+                    <div class="hero-logo">
+                        <img src="./images/LogoTotodrilo-Photoroom.png" alt="Totodrilo IA" class="logo-main-image">
+                    </div>
+                    <div class="hero-badge">
+                        <i class="fas fa-bolt"></i>
+                        <span>Automatización con IA para E-commerce</span>
+                    </div>
+                    <h1 class="hero-title">
+                        <span class="title-main">¿Cuánto dinero perdiste anoche</span>
+                        <span class="title-accent">mientras dormías?</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        El 70% de las ventas online se pierden por falta de respuesta inmediata.
+                        <strong>Contratá al único empleado que trabaja 24/7, no pide vacaciones y recupera carritos
+                            abandonados.</strong>
+                    </p>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">24/7</div>
+                            <div class="stat-label">Ventas Automáticas</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">30%</div>
+                            <div class="stat-label">Recupero de Carritos</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">100%</div>
+                            <div class="stat-label">Omnicanal</div>
+                        </div>
+                    </div>
+                    <div class="hero-buttons">
+                        <a href="https://wa.me/5491130960114?text=Hola!%20Quiero%20una%20demo%20gratuita"
+                            target="_blank" class="cta-button primary">
+                            <i class="fas fa-whatsapp"></i> Solicitar Demo Gratuita
+                        </a>
+                        <button class="cta-button secondary"
+                            onclick="document.getElementById('casos-exito').scrollIntoView({behavior: 'smooth'})">
+                            <i class="fas fa-play-circle"></i> Ver Casos de Éxito
+                        </button>
+                    </div>
+                    <div class="hero-trust">
+                        <p><i class="fas fa-check-circle"></i> Sin costos ocultos • Capacitación incluida • Soporte
+                            personalizado</p>
+                    </div>
+                </div>
+
+                <!-- Chat Simulator -->
+                <div class="chat-simulator-container">
+                    <div class="chat-window">
+                        <div class="chat-header">
+                            <div class="chat-avatar">
+                                <img src="./images/LogoTotodrilo-Photoroom.png" alt="Totodrilo"
+                                    style="width: 100%; height: 100%; object-fit: contain;">
+                            </div>
+                            <div class="chat-info">
+                                <h4>Totodrilo IA</h4>
+                                <span>En línea ahora</span>
+                            </div>
+                        </div>
+                        <div class="chat-body">
+                            <div class="chat-message user" style="animation-delay: 1s">Hola, precio?</div>
+                            <div class="typing-indicator"
+                                style="animation-delay: 1.5s; animation-duration: 1s; display: none;">
+                                <div class="typing-dot"></div>
+                                <div class="typing-dot"></div>
+                                <div class="typing-dot"></div>
+                            </div>
+                            <div class="chat-message bot" style="animation-delay: 2.5s">Hola! 👋 Soy el asistente de
+                                Totodrilo. Nuestros planes de automatización empiezan desde $150 USD/mes.</div>
+                            <div class="chat-message user" style="animation-delay: 4.5s">Me interesa para mi tienda.
+                            </div>
+                            <div class="chat-message bot" style="animation-delay: 6s">Genial! 🚀 Te agendo una demo
+                                gratuita
+                                de 15 min para mostrarte cómo funciona?</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!-- Problema Section -->
+    <section class="problem-section">
+        <div class="container">
+            <h2 class="section-title-small">¿Te suena familiar?</h2>
+            <div class="problems-grid">
+                <div class="problem-card">
+                    <div class="problem-icon">😴</div>
+                    <h3>Perdés ventas de noche y fines de semana</h3>
+                    <p>Tus clientes te escriben fuera de horario y se van a la competencia</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">😫</div>
+                    <h3>Respondés las mismas preguntas 100 veces</h3>
+                    <p>"¿Tenés stock?" "¿Cuánto sale el envío?" Una y otra vez...</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">📱</div>
+                    <h3>Tu equipo colapsa con mensajes</h3>
+                    <p>Demasiados chats, errores en pedidos, clientes esperando</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">💸</div>
+                    <h3>Contratar más personal es caro</h3>
+                    <p>Cada vendedor cuesta, se enferma, tiene vacaciones... Por ejemplo, perdés ventas durante el
+                        Shabat o feriados religiosos</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicios Section -->
+    <section class="services" id="servicios">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nuestra Solución: Automatización Inteligente</h2>
+                <p class="section-subtitle">Implementamos chatbots con IA que atienden tu negocio 24/7, sin errores y
+                    sin descanso</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card featured">
+                    <div class="service-badge">MÁS POPULAR</div>
+                    <div class="service-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <h3 class="service-title">Chatbot WhatsApp con IA</h3>
+                    <p class="service-description">
+                        Tu asistente virtual que responde consultas, informa stock, calcula envíos y toma pedidos
+                        automáticamente.
+                    </p>
+                    <ul class="service-list">
+                        <li><i class="fas fa-check"></i> Respuestas instantáneas 24/7</li>
+                        <li><i class="fas fa-check"></i> Consulta de stock en tiempo real</li>
+                        <li><i class="fas fa-check"></i> Toma de pedidos automatizada</li>
+                        <li><i class="fas fa-check"></i> Cálculo de envíos automático</li>
+                    </ul>
+                    <div class="service-features">
+                        <span class="feature-tag">WhatsApp Business</span>
+                        <span class="feature-tag">IA Conversacional</span>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="service-title">Seguimiento Inteligente</h3>
+                    <p class="service-description">
+                        El sistema persigue sutilmente a quien no compró para cerrar la venta automáticamente.
+                    </p>
+                    <ul class="service-list">
+                        <li><i class="fas fa-check"></i> Follow-up a las 24hs, 72hs y 120hs</li>
+                        <li><i class="fas fa-check"></i> Recuperación de clientes dormidos</li>
+                        <li><i class="fas fa-check"></i> Flujo de ofertas recurrentes</li>
+                        <li><i class="fas fa-check"></i> Aumento de LTV (Lifetime Value)</li>
+                    </ul>
+                    <div class="service-features">
+                        <span class="feature-tag">Estrategia</span>
+                        <span class="feature-tag">Ventas</span>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <h3 class="service-title">Integraciones Multi-Plataforma</h3>
+                    <p class="service-description">
+                        Conectamos WhatsApp con Google Sheets, bases de datos y sistemas de envío.
+                    </p>
+                    <ul class="service-list">
+                        <li><i class="fas fa-check"></i> Google Sheets / Excel</li>
+                        <li><i class="fas fa-check"></i> MongoDB / Supabase</li>
+                        <li><i class="fas fa-check"></i> APIs de envíos</li>
+                        <li><i class="fas fa-check"></i> Mercado Pago</li>
+                    </ul>
+                    <div class="service-features">
+                        <span class="feature-tag">N8N</span>
+                        <span class="feature-tag">APIs</span>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="service-title">Capacitación y Soporte</h3>
+                    <p class="service-description">
+                        Te enseñamos a usar y mantener el sistema. Tu equipo aprende sin depender de nosotros.
+                    </p>
+                    <ul class="service-list">
+                        <li><i class="fas fa-check"></i> Capacitación completa</li>
+                        <li><i class="fas fa-check"></i> Documentación detallada</li>
+                        <li><i class="fas fa-check"></i> Soporte WhatsApp</li>
+                        <li><i class="fas fa-check"></i> Actualizaciones incluidas</li>
+                    </ul>
+                    <div class="service-features">
+                        <span class="feature-tag">Autonomía</span>
+                        <span class="feature-tag">Sin Dependencia</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Planes Section -->
+    <section class="pricing-section" id="planes">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Planes Diseñados para Escalar</h2>
+                <p class="section-subtitle">Elegí la potencia que tu negocio necesita</p>
+            </div>
+            <div class="pricing-grid">
+                <!-- Plan Básico -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Plan Básico</h3>
+                        <p class="pricing-subtitle">Automatización WhatsApp</p>
+                        <div class="pricing-price">Ideal para empezar</div>
+                    </div>
+                    <div class="pricing-body">
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> <strong>Respuestas Instantáneas 24/7</strong></li>
+                            <li><i class="fas fa-check"></i> Recuperación de Carritos</li>
+                            <li><i class="fas fa-check"></i> Calificación de Leads</li>
+                            <li><i class="fas fa-check"></i> Base de Conocimiento IA</li>
+                            <li><i class="fas fa-check"></i> Soporte Técnico</li>
+                        </ul>
+                        <a href="https://wa.me/5491130960114?text=Me%20interesa%20el%20Plan%20Básico" target="_blank"
+                            class="cta-button secondary full-width">
+                            Consultar Precio
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Plan Pro -->
+                <div class="pricing-card featured">
+                    <div class="pricing-badge">MÁS ELEGIDO</div>
+                    <div class="pricing-header">
+                        <h3>Plan Pro</h3>
+                        <p class="pricing-subtitle">Omnicanalidad Total + Estrategia</p>
+                        <div class="pricing-price">Para escalar ventas</div>
+                    </div>
+                    <div class="pricing-body">
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> <strong>Todo lo del Plan Básico</strong></li>
+                            <li><i class="fas fa-check"></i> <strong>WhatsApp + Facebook + Instagram</strong></li>
+                            <li><i class="fas fa-check"></i> Seguimiento de Ventas (24/72/120hs)</li>
+                            <li><i class="fas fa-check"></i> Flujo de Ofertas Recurrentes</li>
+                            <li><i class="fas fa-check"></i> Estrategia de Ventas Personalizada</li>
+                        </ul>
+                        <a href="https://wa.me/5491130960114?text=Me%20interesa%20el%20Plan%20Pro" target="_blank"
+                            class="cta-button primary full-width">
+                            Quiero Escalar Mis Ventas
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Casos de Éxito -->
+    <section class="cases-section" id="casos-exito">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Casos de Éxito Reales</h2>
+                <p class="section-subtitle">E-commerce que ya están automatizando sus ventas con nosotros</p>
+            </div>
+            <div class="cases-grid">
+                <div class="case-card">
+                    <div class="case-header">
+                        <div class="case-logo">
+                            <i class="fas fa-store"></i>
+                        </div>
+                        <div class="case-info">
+                            <h3>NNN Store</h3>
+                            <p class="case-industry">E-commerce • Retail</p>
+                        </div>
+                        <a href="https://wa.me/5491172384037" target="_blank" class="case-link">
+                            <i class="fab fa-whatsapp"></i> Probar Bot
+                        </a>
+                    </div>
+                    <div class="case-description">
+                        <p>Tienda online con catálogo automatizado vía WhatsApp. Los clientes consultan productos y
+                            hacen pedidos sin intervención humana.</p>
+                    </div>
+                    <div class="case-results">
+                        <div class="result-item">
+                            <div class="result-number">70%</div>
+                            <div class="result-label">Menos consultas manuales</div>
+                        </div>
+                        <div class="result-item">
+                            <div class="result-number">24/7</div>
+                            <div class="result-label">Atención continua</div>
+                        </div>
+                    </div>
+                    <div class="case-tech">
+                        <span class="tech-tag">WhatsApp Business</span>
+                        <span class="tech-tag">Chatbot IA</span>
+                        <span class="tech-tag">Automatización</span>
+                    </div>
+                </div>
+
+                <div class="case-card featured">
+                    <div class="case-badge">DESTACADO</div>
+                    <div class="case-header">
+                        <div class="case-logo">
+                            <i class="fas fa-tshirt"></i>
+                        </div>
+                        <div class="case-info">
+                            <h3>Bross Underwear</h3>
+                            <p class="case-industry">E-commerce • Moda</p>
+                        </div>
+                        <a href="https://wa.me/5491124929071" target="_blank" class="case-link">
+                            <i class="fab fa-whatsapp"></i> Probar Bot
+                        </a>
+                    </div>
+                    <div class="case-description">
+                        <p>Marca de ropa interior con asistente de ventas inteligente. Responde sobre talles, materiales
+                            y procesa pedidos vía WhatsApp.</p>
+                    </div>
+                    <div class="case-results">
+                        <div class="result-item">
+                            <div class="result-number">+150%</div>
+                            <div class="result-label">Aumento en conversiones</div>
+                        </div>
+                        <div class="result-item">
+                            <div class="result-number">3min</div>
+                            <div class="result-label">Tiempo de respuesta</div>
+                        </div>
+                    </div>
+                    <div class="case-tech">
+                        <span class="tech-tag">WhatsApp Business</span>
+                        <span class="tech-tag">Chatbot IA</span>
+                        <span class="tech-tag">CRM Integrado</span>
+                    </div>
+                </div>
+            </div>
+            <div class="cases-cta">
+                <p>¿Querés que tu negocio sea el próximo caso de éxito?</p>
+                <a href="https://wa.me/5491130960114?text=Quiero%20automatizar%20mi%20e-commerce" target="_blank"
+                    class="cta-button primary">
+                    <i class="fab fa-whatsapp"></i> Hablemos de tu Proyecto
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cómo Funciona -->
+    <section class="how-it-works" id="como-funciona">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">¿Cómo Funciona?</h2>
+                <p class="section-subtitle">Proceso simple en 4 pasos</p>
+            </div>
+            <div class="steps-container">
+                <div class="step-item">
+                    <div class="step-number">01</div>
+                    <div class="step-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>Reunión de Diagnóstico</h3>
+                    <p>Hablamos por WhatsApp para entender tu negocio. Te pedimos: página del cliente, redes sociales,
+                        plataforma de ventas que usás, y cuánto vendés a la semana. Esto nos permite armar un
+                        cuestionario o copiarlo de alguna agencia si ya tenés uno.</p>
+                    <div class="step-time">30 min • Gratis</div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">02</div>
+                    <div class="step-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Desarrollo</h3>
+                    <p>Creamos tu chatbot personalizado e integramos con tus sistemas.</p>
+                    <div class="step-time">7-14 días</div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">03</div>
+                    <div class="step-icon">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <h3>Capacitación</h3>
+                    <p>Te enseñamos todo para que seas autónomo. Armamos guías fáciles de seguir, videos explicativos y
+                        sesiones de mantenimiento. Podés cambiar horarios, precios y respuestas cuando quieras.</p>
+                    <div class="step-time">2-3 horas</div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">04</div>
+                    <div class="step-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3>Soporte Continuo</h3>
+                    <p>Monitoreamos el funcionamiento y ajustamos lo que necesites. Te limitamos el soporte solo a lo
+                        esencial para que aprendas a gestionar tu bot sin depender de nosotros.</p>
+                    <div class="step-time">Continuo</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Beneficios -->
+    <section class="benefits">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">¿Por Qué Elegir Totodrilo.tech?</h2>
+                <p class="section-subtitle">Lo que nos hace diferentes</p>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <i class="fas fa-hand-holding-usd"></i>
+                    </div>
+                    <div class="benefit-content">
+                        <h3>Precios Accesibles</h3>
+                        <p>Sin costos ocultos. Planes para PyMEs argentinas.</p>
+                    </div>
+                </div>
+
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="benefit-content">
+                        <h3>Capacitación Incluida</h3>
+                        <p>Tu equipo aprende a mantener el sistema.</p>
+                    </div>
+                </div>
+
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <div class="benefit-content">
+                        <h3>100% Argentino</h3>
+                        <p>Hablamos en criollo, mismo huso horario.</p>
+                    </div>
+                </div>
+
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="benefit-content">
+                        <h3>Sin Dependencia</h3>
+                        <p>El sistema es tuyo, sin subscripciones eternas.</p>
+                    </div>
+                </div>
+
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="benefit-content">
+                        <h3>Implementación Rápida</h3>
+                        <p>En 1-2 semanas tenés tu chatbot funcionando.</p>
+                    </div>
+                </div>
+
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <div class="benefit-content">
+                        <h3>Soporte Real</h3>
+                        <p>Por WhatsApp, hablás directo conmigo.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonios -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Lo Que Dicen Nuestros Clientes</h2>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "Antes perdíamos ventas de noche. Ahora el bot responde al toque y cerramos pedidos mientras
+                        dormimos."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <img src="./images/testimonial-nnn-store.jpg" alt="Foto de NNN Store" class="author-img"
+                                loading="lazy" width="64" height="64">
+                        </div>
+                        <div class="author-info">
+                            <h4>NNN Store</h4>
+                            <p>E-commerce • Retail</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "Lo mejor fue la capacitación. Ahora nosotros mismos podemos hacer cambios."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <img src="./images/testimonial-bross.jpg" alt="Foto de Bross Underwear" class="author-img"
+                                loading="lazy" width="64" height="64">
+                        </div>
+                        <div class="author-info">
+                            <h4>Bross Underwear</h4>
+                            <p>Moda • Indumentaria</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "Probé los bots antes de contratar. Me convenció ver que funcionaban de verdad."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <img src="./images/testimonial-pyme.jpg" alt="Foto de Cliente PyME" class="author-img"
+                                loading="lazy" width="64" height="64">
+                        </div>
+                        <div class="author-info">
+                            <h4>Cliente PyME</h4>
+                            <p>E-commerce</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section class="contact" id="contacto">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Hablemos de tu Proyecto</h2>
+                <p class="section-subtitle">¿Listo para automatizar? Contactanos para una demo gratis.</p>
+            </div>
+            <div class="contact-wrapper">
+                <!-- Información de contacto -->
+                <div class="contact-info">
+                    <h3>Otras formas de contacto</h3>
+                    <div class="contact-item whatsapp-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <div>
+                            <strong>WhatsApp</strong>
+                            <a href="https://wa.me/5491130960114" target="_blank">+54 9 11 3096-0114</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <strong>Email</strong>
+                            <a href="mailto:totodrilo.ia@gmail.com">totodrilo.ia@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-instagram"></i>
+                        <div>
+                            <strong>Instagram</strong>
+                            <a href="https://www.instagram.com/totodrilo.ia/" target="_blank">@totodrilo.ia</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Formulario de contacto -->
+                <div class="contact-form-container">
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Nombre *</label>
+                            <input type="text" id="name" name="name" required placeholder="Tu nombre completo">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required placeholder="tu@email.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Teléfono *</label>
+                            <input type="tel" id="phone" name="phone" required placeholder="+54 9 11 1234-5678">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="business">Tipo de negocio *</label>
+                            <select id="business" name="business" required>
+                                <option value="">Seleccioná una opción</option>
+                                <option value="E-commerce">E-commerce</option>
+                                <option value="Tienda física">Tienda física</option>
+                                <option value="Servicios">Servicios</option>
+                                <option value="Retail">Retail</option>
+                                <option value="Otro">Otro</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Mensaje *</label>
+                            <textarea id="message" name="message" rows="5" required
+                                placeholder="Contanos sobre tu proyecto y cómo podemos ayudarte..."></textarea>
+                        </div>
+
+                        <button type="submit" class="cta-button primary submit-btn" id="submit-btn">
+                            <i class="fas fa-paper-plane"></i> Enviar Mensaje
+                        </button>
+
+                        <div id="form-message" class="form-message"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-text">Totodrilo.<span class="logo-accent">tech</span></span>
+                    <p>Automatización con IA para E-commerce</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#servicios">Servicios</a>
+                    <a href="#casos-exito">Casos de Éxito</a>
+                    <a href="#contacto">Contacto</a>
+                    <a href="politica-privacidad.html">Política de Privacidad</a>
+                    <a href="https://www.instagram.com/totodrilo.ia/" target="_blank">Instagram</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Totodrilo.tech. Hecho con 💜 en Buenos Aires, Argentina 🇦🇷</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/app.js"></script>
+</body>
+
+</html>

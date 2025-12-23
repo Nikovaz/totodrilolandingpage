@@ -1,0 +1,83 @@
+/* MOBILE MENU FIX - FORZAR VISIBILIDAD */
+
+@media (max-width: 968px) {
+    /* Asegurar que el toggle sea visible y clickeable */
+    .nav-toggle {
+        display: flex !important;
+        position: relative !important;
+        z-index: 99999 !important;
+        cursor: pointer !important;
+        pointer-events: auto !important;
+    }
+
+    /* El toggle siempre debe ser clickeable */
+    .nav-toggle.active {
+        pointer-events: auto !important;
+    }
+
+    /* Menu oculto por defecto */
+    .nav-menu {
+        position: fixed !important;
+        top: 0 !important;
+        left: -100% !important;
+        width: 100vw !important;
+        height: 100vh !important;
+        background: #0a0a0a !important;
+        z-index: 99998 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        padding: 100px 2rem 2rem 2rem !important;
+        gap: 1.6rem !important;
+        overflow-y: auto !important;
+        transition: left 0.3s ease-in-out !important;
+        align-items: flex-start !important;
+    }
+
+    /* Menu visible cuando está activo */
+    .nav-menu.active {
+        left: 0 !important;
+    }
+
+    /* Links del menu */
+    .nav-menu .nav-link {
+        display: block !important;
+        width: 100% !important;
+        padding: 0.8rem 0 !important;
+        font-size: 1.1rem !important;
+        color: #ffffff !important;
+        border-bottom: 1px solid rgba(139, 92, 246, 0.1) !important;
+        text-decoration: none !important;
+    }
+
+    /* CTA button */
+    .nav-menu .nav-cta {
+        width: 100% !important;
+        justify-content: center !important;
+        padding: 12px 20px !important;
+        margin-top: 0.5rem !important;
+    }
+
+    /* Animación del burger */
+    .nav-toggle span {
+        pointer-events: none !important;
+    }
+    
+    .nav-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px) !important;
+    }
+    
+    .nav-toggle.active span:nth-child(2) {
+        opacity: 0 !important;
+    }
+    
+    .nav-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px) !important;
+    }
+}
+
+/* Ocultar botón de cerrar en desktop */
+@media (min-width: 969px) {
+    .nav-close {
+        display: none !important;
+    }
+}

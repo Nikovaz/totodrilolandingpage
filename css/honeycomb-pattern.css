@@ -1,0 +1,273 @@
+/* CSS ADICIONAL PARA PANAL HEXAGONAL - AGREGAR AL FINAL DE styles.css */
+
+/* Animación para el panal hexagonal */
+@keyframes honeycombSlowMove {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-70px, -121px);
+    }
+}
+
+/* ====================================
+   PANAL HEXAGONAL - GEOMETRÍA SAGRADA
+   Desde "¿Te suena familiar?" hasta el final
+   ==================================== */
+
+/* Problem Section */
+.problem-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.problem-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    background-image:
+        repeating-linear-gradient(0deg, transparent, transparent 70px, rgba(139, 92, 246, 0.25) 70px, rgba(139, 92, 246, 0.25) 71px),
+        repeating-linear-gradient(60deg, transparent, transparent 70px, rgba(6, 214, 160, 0.25) 70px, rgba(6, 214, 160, 0.25) 71px),
+        repeating-linear-gradient(120deg, transparent, transparent 70px, rgba(139, 92, 246, 0.2) 70px, rgba(139, 92, 246, 0.2) 71px);
+    background-size: 100% 100%;
+    z-index: 0;
+    pointer-events: none;
+    animation: honeycombSlowMove 180s linear infinite;
+    opacity: 0.8;
+}
+
+.problem-section > .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Services Section */
+.services {
+    position: relative;
+    overflow: hidden;
+}
+
+.services::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    background-image:
+        repeating-linear-gradient(0deg, transparent, transparent 70px, rgba(139, 92, 246, 0.25) 70px, rgba(139, 92, 246, 0.25) 71px),
+        repeating-linear-gradient(60deg, transparent, transparent 70px, rgba(6, 214, 160, 0.25) 70px, rgba(6, 214, 160, 0.25) 71px),
+        repeating-linear-gradient(120deg, transparent, transparent 70px, rgba(139, 92, 246, 0.2) 70px, rgba(139, 92, 246, 0.2) 71px);
+    background-size: 100% 100%;
+    z-index: 0;
+    pointer-events: none;
+    animation: honeycombSlowMove 180s linear infinite;
+    opacity: 0.8;
+}
+
+.services > .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Cases Section */
+.cases-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.cases-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    background-image:
+        repeating-linear-gradient(0deg, transparent, transparent 70px, rgba(139, 92, 246, 0.25) 70px, rgba(139, 92, 246, 0.25) 71px),
+        repeating-linear-gradient(60deg, transparent, transparent 70px, rgba(6, 214, 160, 0.25) 70px, rgba(6, 214, 160, 0.25) 71px),
+        repeating-linear-gradient(120deg, transparent, transparent 70px, rgba(139, 92, 246, 0.2) 70px, rgba(139, 92, 246, 0.2) 71px);
+    background-size: 100% 100%;
+    z-index: 0;
+    pointer-events: none;
+    animation: honeycombSlowMove 180s linear infinite;
+    opacity: 0.8;
+}
+
+.cases-section > .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* How It Works Section */
+.how-it-works {
+    position: relative;
+    overflow: hidden;
+}
+
+.how-it-works::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    background-image:
+        repeating-linear-gradient(0deg, transparent, transparent 70px, rgba(139, 92, 246, 0.25) 70px, rgba(139, 92, 246, 0.25) 71px),
+        repeating-linear-gradient(60deg, transparent, transparent 70px, rgba(6, 214, 160, 0.25) 70px, rgba(6, 214, 160, 0.25) 71px),
+        repeating-linear-gradient(120deg, transparent, transparent 70px, rgba(139, 92, 246, 0.2) 70px, rgba(139, 92, 246, 0.2) 71px);
+    background-size: 100% 100%;
+    z-index: 0;
+    pointer-events: none;
+    animation: honeycombSlowMove 180s linear infinite;
+    opacity: 0.8;
+}
+
+.how-it-works > .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Benefits Section */
+.benefits {
+    position: relative;
+    overflow: hidden;
+}
+
+.benefits::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    background-image:
+        repeating-linear-gradient(0deg, transparent, transparent 70px, rgba(139, 92, 246, 0.25) 70px, rgba(139, 92, 246, 0.25) 71px),
+        repeating-linear-gradient(60deg, transparent, transparent 70px, rgba(6, 214, 160, 0.25) 70px, rgba(6, 214, 160, 0.25) 71px),
+        repeating-linear-gradient(120deg, transparent, transparent 70px, rgba(139, 92, 246, 0.2) 70px, rgba(139, 92, 246, 0.2) 71px);
+    background-size: 100% 100%;
+    z-index: 0;
+    pointer-events: none;
+    animation: honeycombSlowMove 180s linear infinite;
+    opacity: 0.8;
+}
+
+.benefits > .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Testimonials Section */
+.testimonials {
+    position: relative;
+    overflow: hidden;
+}
+
+.testimonials::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    background-image:
+        repeating-linear-gradient(0deg, transparent, transparent 70px, rgba(139, 92, 246, 0.25) 70px, rgba(139, 92, 246, 0.25) 71px),
+        repeating-linear-gradient(60deg, transparent, transparent 70px, rgba(6, 214, 160, 0.25) 70px, rgba(6, 214, 160, 0.25) 71px),
+        repeating-linear-gradient(120deg, transparent, transparent 70px, rgba(139, 92, 246, 0.2) 70px, rgba(139, 92, 246, 0.2) 71px);
+    background-size: 100% 100%;
+    z-index: 0;
+    pointer-events: none;
+    animation: honeycombSlowMove 180s linear infinite;
+    opacity: 0.8;
+}
+
+.testimonials > .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Contact Section */
+.contact {
+    position: relative;
+    overflow: hidden;
+}
+
+.contact::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    background-image:
+        repeating-linear-gradient(0deg, transparent, transparent 70px, rgba(139, 92, 246, 0.25) 70px, rgba(139, 92, 246, 0.25) 71px),
+        repeating-linear-gradient(60deg, transparent, transparent 70px, rgba(6, 214, 160, 0.25) 70px, rgba(6, 214, 160, 0.25) 71px),
+        repeating-linear-gradient(120deg, transparent, transparent 70px, rgba(139, 92, 246, 0.2) 70px, rgba(139, 92, 246, 0.2) 71px);
+    background-size: 100% 100%;
+    z-index: 0;
+    pointer-events: none;
+    animation: honeycombSlowMove 180s linear infinite;
+    opacity: 0.8;
+}
+
+.contact > .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Footer */
+.footer {
+    position: relative;
+    overflow: hidden;
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    background-image:
+        repeating-linear-gradient(0deg, transparent, transparent 70px, rgba(139, 92, 246, 0.25) 70px, rgba(139, 92, 246, 0.25) 71px),
+        repeating-linear-gradient(60deg, transparent, transparent 70px, rgba(6, 214, 160, 0.25) 70px, rgba(6, 214, 160, 0.25) 71px),
+        repeating-linear-gradient(120deg, transparent, transparent 70px, rgba(139, 92, 246, 0.2) 70px, rgba(139, 92, 246, 0.2) 71px);
+    background-size: 100% 100%;
+    z-index: 0;
+    pointer-events: none;
+    animation: honeycombSlowMove 180s linear infinite;
+    opacity: 0.8;
+}
+
+.footer > .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* RESPONSIVE - Mobile */
+@media (max-width: 768px) {
+    .problem-section::before,
+    .services::before,
+    .cases-section::before,
+    .how-it-works::before,
+    .benefits::before,
+    .testimonials::before,
+    .contact::before,
+    .footer::before {
+        background-image:
+            repeating-linear-gradient(0deg, transparent, transparent 50px, rgba(139, 92, 246, 0.3) 50px, rgba(139, 92, 246, 0.3) 51px),
+            repeating-linear-gradient(60deg, transparent, transparent 50px, rgba(6, 214, 160, 0.3) 50px, rgba(6, 214, 160, 0.3) 51px),
+            repeating-linear-gradient(120deg, transparent, transparent 50px, rgba(139, 92, 246, 0.25) 50px, rgba(139, 92, 246, 0.25) 51px);
+    }
+}

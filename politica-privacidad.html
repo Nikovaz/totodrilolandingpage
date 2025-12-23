@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Privacidad - Totodrilo.tech</title>
+    <meta name="description" content="Política de privacidad de Totodrilo.tech - Automatización con IA para E-commerce. Información sobre cómo manejamos y protegemos tus datos personales.">
+    <meta name="robots" content="index, follow">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <style>
+        /* Estilos específicos para política de privacidad */
+        .privacy-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 120px 20px 80px;
+        }
+
+        .privacy-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .privacy-title {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 800;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .privacy-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.5rem;
+        }
+
+        .privacy-date {
+            display: inline-block;
+            background: rgba(139, 92, 246, 0.1);
+            border: 1px solid var(--border);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            color: var(--accent);
+            margin-top: 1rem;
+        }
+
+        .privacy-content {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            padding: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        .privacy-section {
+            margin-bottom: 3rem;
+        }
+
+        .privacy-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .privacy-section h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--border);
+        }
+
+        .privacy-section h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-top: 1.5rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .privacy-section p {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .privacy-section ul,
+        .privacy-section ol {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+            padding-left: 2rem;
+        }
+
+        .privacy-section li {
+            margin-bottom: 0.5rem;
+        }
+
+        .privacy-section strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+
+        .privacy-highlight {
+            background: rgba(139, 92, 246, 0.1);
+            border-left: 3px solid var(--primary);
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+        }
+
+        .privacy-highlight p {
+            margin-bottom: 0;
+        }
+
+        .contact-info-box {
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(6, 214, 160, 0.05));
+            border: 2px solid var(--primary);
+            border-radius: 20px;
+            padding: 2rem;
+            margin-top: 3rem;
+            text-align: center;
+        }
+
+        .contact-info-box h3 {
+            font-size: 1.5rem;
+            color: var(--text);
+            margin-bottom: 1rem;
+        }
+
+        .contact-info-box p {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+        }
+
+        .contact-links {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 1.5rem;
+        }
+
+        .contact-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--primary);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .contact-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 25px rgba(139, 92, 246, 0.5);
+        }
+
+        .contact-link.whatsapp {
+            background: var(--whatsapp);
+        }
+
+        .contact-link.whatsapp:hover {
+            box-shadow: 0 6px 25px rgba(37, 211, 102, 0.5);
+        }
+
+        .back-to-home {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .back-to-home:hover {
+            gap: 12px;
+            color: var(--accent);
+        }
+
+        @media (max-width: 768px) {
+            .privacy-content {
+                padding: 2rem 1.5rem;
+            }
+
+            .privacy-section h2 {
+                font-size: 1.5rem;
+            }
+
+            .privacy-section h3 {
+                font-size: 1.2rem;
+            }
+
+            .contact-links {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .contact-link {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Fondo animado global (reutilizado del index) -->
+    <div class="global-background">
+        <div class="geometric-shapes-global">
+            <div class="shape-global shape-global-1"></div>
+            <div class="shape-global shape-global-2"></div>
+            <div class="shape-global shape-global-3"></div>
+            <div class="shape-global shape-global-4"></div>
+            
+            <div class="honeycomb">
+                <div class="honeycomb-cell cell-1"></div>
+                <div class="honeycomb-cell cell-2"></div>
+                <div class="honeycomb-cell cell-3"></div>
+                <div class="honeycomb-cell cell-4"></div>
+                <div class="honeycomb-cell cell-5"></div>
+                <div class="honeycomb-cell cell-6"></div>
+                <div class="honeycomb-cell cell-7"></div>
+                <div class="honeycomb-cell cell-8"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header simplificado -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <a href="index.html" style="display: flex; align-items: center; gap: 12px; text-decoration: none;">
+                        <img src="./images/LogoTotodrilo-Photoroom.png" alt="Totodrilo.tech Logo" class="logo-img">
+                        <span class="logo-text">Totodrilo <span class="logo-accent">IA</span></span>
+                    </a>
+                </div>
+                <div class="nav-menu">
+                    <a href="index.html" class="nav-link">Volver al Inicio</a>
+                    <a href="index.html#contacto" class="cta-button nav-cta">
+                        <i class="fas fa-envelope"></i> Contacto
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Contenido principal -->
+    <main class="privacy-container">
+        <a href="index.html" class="back-to-home">
+            <i class="fas fa-arrow-left"></i> Volver al inicio
+        </a>
+
+        <div class="privacy-header">
+            <h1 class="privacy-title">Política de Privacidad</h1>
+            <p class="privacy-subtitle">Totodrilo.tech - Automatización con IA</p>
+            <span class="privacy-date">
+                <i class="fas fa-calendar-alt"></i> Última actualización: 31 de octubre de 2025
+            </span>
+        </div>
+
+        <div class="privacy-content">
+            <!-- Introducción -->
+            <div class="privacy-section">
+                <h2>1. Introducción</h2>
+                <p>
+                    En <strong>Totodrilo.tech</strong> (en adelante, "nosotros", "nuestro" o "la empresa"), nos comprometemos a proteger la privacidad y seguridad de los datos personales de nuestros usuarios y clientes. Esta Política de Privacidad describe cómo recopilamos, usamos, almacenamos y protegemos tu información personal cuando utilizás nuestros servicios de automatización con inteligencia artificial para e-commerce.
+                </p>
+                <p>
+                    Al utilizar nuestro sitio web (<strong>totodrilo.tech</strong>) o nuestros servicios, aceptás las prácticas descritas en esta política.
+                </p>
+            </div>
+
+            <!-- Información que recopilamos -->
+            <div class="privacy-section">
+                <h2>2. Información que Recopilamos</h2>
+                
+                <h3>2.1 Información que nos proporcionás directamente:</h3>
+                <ul>
+                    <li><strong>Datos de contacto:</strong> nombre, apellido, dirección de correo electrónico, número de teléfono</li>
+                    <li><strong>Información comercial:</strong> nombre de tu negocio, tipo de industria, volumen de ventas, plataformas que utilizás (Tienda Nube, Mercado Libre, etc.)</li>
+                    <li><strong>Comunicaciones:</strong> mensajes que nos enviás a través de formularios de contacto, WhatsApp, email o redes sociales</li>
+                    <li><strong>Información técnica:</strong> datos relacionados con la implementación de nuestros servicios en tu negocio</li>
+                </ul>
+
+                <h3>2.2 Información recopilada automáticamente:</h3>
+                <ul>
+                    <li><strong>Datos de navegación:</strong> dirección IP, tipo de navegador, páginas visitadas, tiempo de permanencia</li>
+                    <li><strong>Cookies y tecnologías similares:</strong> utilizamos cookies para mejorar la experiencia del usuario y analizar el tráfico del sitio</li>
+                    <li><strong>Datos de uso:</strong> información sobre cómo interactuás con nuestro sitio web y servicios</li>
+                </ul>
+
+                <h3>2.3 Información de terceros:</h3>
+                <p>
+                    Podemos recibir información adicional de plataformas integradas como Meta (Facebook/Instagram), Google Analytics, y servicios de email marketing, siempre con tu consentimiento previo.
+                </p>
+            </div>
+
+            <!-- Cómo usamos tu información -->
+            <div class="privacy-section">
+                <h2>3. Cómo Usamos tu Información</h2>
+                <p>Utilizamos la información recopilada para los siguientes propósitos:</p>
+                
+                <h3>3.1 Prestación de servicios:</h3>
+                <ul>
+                    <li>Desarrollar e implementar chatbots con inteligencia artificial personalizados para tu negocio</li>
+                    <li>Integrar sistemas de automatización con WhatsApp Business, CRM y plataformas de e-commerce</li>
+                    <li>Brindar soporte técnico y capacitación a tu equipo</li>
+                    <li>Mantener y mejorar nuestros servicios</li>
+                </ul>
+
+                <h3>3.2 Comunicación:</h3>
+                <ul>
+                    <li>Responder consultas y solicitudes de información</li>
+                    <li>Enviar actualizaciones sobre el estado de tu proyecto</li>
+                    <li>Informarte sobre nuevas funcionalidades y mejoras</li>
+                    <li>Enviar comunicaciones de marketing (solo con tu consentimiento previo)</li>
+                </ul>
+
+                <h3>3.3 Análisis y mejora:</h3>
+                <ul>
+                    <li>Analizar el uso de nuestro sitio web y servicios</li>
+                    <li>Mejorar la experiencia del usuario</li>
+                    <li>Desarrollar nuevas funcionalidades</li>
+                    <li>Realizar estudios de mercado y análisis estadísticos</li>
+                </ul>
+
+                <h3>3.4 Cumplimiento legal:</h3>
+                <ul>
+                    <li>Cumplir con obligaciones legales y regulatorias</li>
+                    <li>Proteger nuestros derechos legales</li>
+                    <li>Prevenir fraudes y actividades ilícitas</li>
+                </ul>
+            </div>
+
+            <!-- Base legal -->
+            <div class="privacy-section">
+                <h2>4. Base Legal para el Tratamiento de Datos</h2>
+                <p>Procesamos tus datos personales basándonos en:</p>
+                <ul>
+                    <li><strong>Consentimiento:</strong> cuando nos autorizás explícitamente a utilizar tus datos</li>
+                    <li><strong>Ejecución de contrato:</strong> cuando es necesario para prestarte nuestros servicios</li>
+                    <li><strong>Interés legítimo:</strong> para mejorar nuestros servicios y comunicarnos contigo</li>
+                    <li><strong>Cumplimiento legal:</strong> cuando la ley lo requiere</li>
+                </ul>
+            </div>
+
+            <!-- Compartir información -->
+            <div class="privacy-section">
+                <h2>5. Compartir tu Información</h2>
+                <p>
+                    No vendemos, alquilamos ni compartimos tu información personal con terceros, excepto en las siguientes circunstancias:
+                </p>
+
+                <h3>5.1 Proveedores de servicios:</h3>
+                <p>
+                    Compartimos información con proveedores que nos ayudan a operar nuestro negocio:
+                </p>
+                <ul>
+                    <li><strong>Servicios de hosting:</strong> para alojar nuestro sitio web y bases de datos</li>
+                    <li><strong>Servicios de email:</strong> EmailJS y otros proveedores de email marketing</li>
+                    <li><strong>Servicios de IA:</strong> proveedores de modelos de lenguaje y APIs (Claude, OpenAI, etc.)</li>
+                    <li><strong>Plataformas de pago:</strong> Mercado Pago y otros procesadores de pagos</li>
+                    <li><strong>Herramientas de análisis:</strong> Google Analytics, Meta Pixel</li>
+                </ul>
+                <p>
+                    Todos nuestros proveedores están obligados contractualmente a proteger tu información y solo pueden usarla para los fines específicos que les autorizamos.
+                </p>
+
+                <h3>5.2 Integraciones de cliente:</h3>
+                <p>
+                    Cuando implementamos nuestros servicios en tu negocio, podemos acceder a sistemas de terceros que vos autorizás (Tienda Nube, Mercado Libre, Google Sheets, etc.) exclusivamente para prestarte el servicio contratado.
+                </p>
+
+                <h3>5.3 Requisitos legales:</h3>
+                <p>
+                    Podemos divulgar tu información si la ley lo requiere o para proteger nuestros derechos legales.
+                </p>
+            </div>
+
+            <!-- Seguridad -->
+            <div class="privacy-section">
+                <h2>6. Seguridad de la Información</h2>
+                <p>
+                    Implementamos medidas de seguridad técnicas, administrativas y físicas para proteger tu información personal:
+                </p>
+                <ul>
+                    <li><strong>Cifrado:</strong> utilizamos HTTPS y SSL/TLS para proteger la transmisión de datos</li>
+                    <li><strong>Acceso restringido:</strong> solo personal autorizado puede acceder a información sensible</li>
+                    <li><strong>Autenticación:</strong> sistemas de autenticación de dos factores cuando es posible</li>
+                    <li><strong>Monitoreo:</strong> vigilancia continua de nuestros sistemas contra vulnerabilidades</li>
+                    <li><strong>Backups:</strong> copias de seguridad regulares de datos críticos</li>
+                </ul>
+                
+                <div class="privacy-highlight">
+                    <p>
+                        <i class="fas fa-shield-alt" style="color: var(--primary);"></i>
+                        <strong>Importante:</strong> Ningún sistema es 100% seguro. Aunque tomamos todas las precauciones razonables, no podemos garantizar la seguridad absoluta de tu información.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Retención de datos -->
+            <div class="privacy-section">
+                <h2>7. Retención de Datos</h2>
+                <p>
+                    Conservamos tu información personal durante el tiempo necesario para cumplir con los propósitos descritos en esta política:
+                </p>
+                <ul>
+                    <li><strong>Clientes activos:</strong> mientras mantengamos una relación comercial</li>
+                    <li><strong>Consultas:</strong> hasta 2 años después de la última comunicación</li>
+                    <li><strong>Datos contractuales:</strong> según lo requiera la legislación argentina (mínimo 10 años)</li>
+                    <li><strong>Marketing:</strong> hasta que retirés tu consentimiento</li>
+                </ul>
+                <p>
+                    Después de estos períodos, eliminamos o anonimizamos tu información de manera segura.
+                </p>
+            </div>
+
+            <!-- Tus derechos -->
+            <div class="privacy-section">
+                <h2>8. Tus Derechos</h2>
+                <p>
+                    De acuerdo con la Ley 25.326 de Protección de Datos Personales de Argentina, tenés los siguientes derechos:
+                </p>
+                <ul>
+                    <li><strong>Acceso:</strong> solicitar una copia de tu información personal</li>
+                    <li><strong>Rectificación:</strong> corregir información incorrecta o incompleta</li>
+                    <li><strong>Supresión:</strong> solicitar la eliminación de tus datos personales</li>
+                    <li><strong>Oposición:</strong> oponerte al procesamiento de tus datos para ciertos fines</li>
+                    <li><strong>Portabilidad:</strong> obtener tus datos en un formato estructurado</li>
+                    <li><strong>Revocación del consentimiento:</strong> retirar tu autorización en cualquier momento</li>
+                </ul>
+                <p>
+                    Para ejercer estos derechos, contactanos a través de:
+                </p>
+                <ul>
+                    <li>Email: <strong>totodrilo.ia@gmail.com</strong></li>
+                    <li>WhatsApp: <strong>+54 9 11 3096-0114</strong></li>
+                </ul>
+                <p>
+                    Responderemos tu solicitud dentro de los 10 días hábiles establecidos por ley.
+                </p>
+            </div>
+
+            <!-- Cookies -->
+            <div class="privacy-section">
+                <h2>9. Cookies y Tecnologías Similares</h2>
+                <p>
+                    Utilizamos cookies y tecnologías similares para mejorar tu experiencia en nuestro sitio:
+                </p>
+
+                <h3>9.1 Tipos de cookies que usamos:</h3>
+                <ul>
+                    <li><strong>Cookies esenciales:</strong> necesarias para el funcionamiento del sitio</li>
+                    <li><strong>Cookies de rendimiento:</strong> para analizar cómo se usa el sitio (Google Analytics)</li>
+                    <li><strong>Cookies de funcionalidad:</strong> para recordar tus preferencias</li>
+                    <li><strong>Cookies de marketing:</strong> para mostrar contenido relevante (Meta Pixel)</li>
+                </ul>
+
+                <h3>9.2 Gestión de cookies:</h3>
+                <p>
+                    Podés configurar tu navegador para rechazar cookies, pero esto puede afectar la funcionalidad del sitio. La mayoría de los navegadores te permiten:
+                </p>
+                <ul>
+                    <li>Ver qué cookies tenés instaladas</li>
+                    <li>Bloquear todas las cookies</li>
+                    <li>Bloquear cookies de terceros</li>
+                    <li>Eliminar cookies al cerrar el navegador</li>
+                </ul>
+            </div>
+
+            <!-- Enlaces a terceros -->
+            <div class="privacy-section">
+                <h2>10. Enlaces a Sitios de Terceros</h2>
+                <p>
+                    Nuestro sitio web puede contener enlaces a sitios de terceros (Instagram, WhatsApp, etc.). No somos responsables por las prácticas de privacidad de estos sitios. Te recomendamos leer sus políticas de privacidad antes de proporcionar información personal.
+                </p>
+            </div>
+
+            <!-- Menores de edad -->
+            <div class="privacy-section">
+                <h2>11. Privacidad de Menores</h2>
+                <p>
+                    Nuestros servicios están dirigidos a empresas y profesionales. No recopilamos intencionalmente información de menores de 18 años. Si descubrimos que hemos recopilado datos de un menor sin consentimiento parental, eliminaremos esa información inmediatamente.
+                </p>
+            </div>
+
+            <!-- Transferencias internacionales -->
+            <div class="privacy-section">
+                <h2>12. Transferencias Internacionales de Datos</h2>
+                <p>
+                    Algunos de nuestros proveedores de servicios pueden estar ubicados fuera de Argentina. Cuando transferimos datos internacionalmente, nos aseguramos de que existan garantías adecuadas de protección, como:
+                </p>
+                <ul>
+                    <li>Cláusulas contractuales estándar aprobadas</li>
+                    <li>Certificaciones de privacidad reconocidas</li>
+                    <li>Acuerdos de protección de datos</li>
+                </ul>
+            </div>
+
+            <!-- Cambios en la política -->
+            <div class="privacy-section">
+                <h2>13. Cambios a Esta Política</h2>
+                <p>
+                    Podemos actualizar esta Política de Privacidad periódicamente para reflejar cambios en nuestras prácticas o por razones legales. Te notificaremos sobre cambios significativos a través de:
+                </p>
+                <ul>
+                    <li>Un aviso destacado en nuestro sitio web</li>
+                    <li>Correo electrónico (si sos cliente activo)</li>
+                    <li>La fecha de "Última actualización" al inicio de esta política</li>
+                </ul>
+                <p>
+                    Te recomendamos revisar esta política periódicamente para mantenerte informado sobre cómo protegemos tu información.
+                </p>
+            </div>
+
+            <!-- Contacto -->
+            <div class="privacy-section">
+                <h2>14. Contacto</h2>
+                <p>
+                    Si tenés preguntas, inquietudes o solicitudes relacionadas con esta Política de Privacidad o el tratamiento de tus datos personales, podés contactarnos:
+                </p>
+                
+                <div class="contact-info-box">
+                    <h3>Información de Contacto</h3>
+                    <p><strong>Totodrilo.tech</strong></p>
+                    <p>
+                        <i class="fas fa-map-marker-alt"></i> Buenos Aires, Argentina<br>
+                        <i class="fas fa-envelope"></i> <strong>totodrilo.ia@gmail.com</strong><br>
+                        <i class="fab fa-whatsapp"></i> <strong>+54 9 11 3096-0114</strong><br>
+                        <i class="fab fa-instagram"></i> <a href="https://www.instagram.com/totodrilo.ia/" target="_blank" style="color: var(--accent); text-decoration: none;">@totodrilo.ia</a>
+                    </p>
+                    
+                    <div class="contact-links">
+                        <a href="mailto:totodrilo.ia@gmail.com" class="contact-link">
+                            <i class="fas fa-envelope"></i> Enviar Email
+                        </a>
+                        <a href="https://wa.me/5491130960114?text=Hola!%20Tengo%20una%20consulta%20sobre%20la%20política%20de%20privacidad" target="_blank" class="contact-link whatsapp">
+                            <i class="fab fa-whatsapp"></i> Contactar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Autoridad de aplicación -->
+            <div class="privacy-section">
+                <h2>15. Autoridad de Aplicación</h2>
+                <p>
+                    La <strong>Agencia de Acceso a la Información Pública</strong> es el órgano de control de la Ley 25.326 de Protección de Datos Personales en Argentina. Tenés derecho a dirigirte a la Agencia para presentar consultas o reclamos.
+                </p>
+                <p>
+                    <strong>Agencia de Acceso a la Información Pública</strong><br>
+                    <i class="fas fa-globe"></i> <a href="https://www.argentina.gob.ar/aaip" target="_blank" style="color: var(--accent); text-decoration: none;">www.argentina.gob.ar/aaip</a>
+                </p>
+            </div>
+
+            <div class="privacy-highlight">
+                <p style="text-align: center;">
+                    <i class="fas fa-info-circle" style="color: var(--primary);"></i>
+                    <strong>Esta política de privacidad cumple con la Ley 25.326 de Protección de Datos Personales de Argentina y está diseñada para transparentar el uso de tu información personal.</strong>
+                </p>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 3rem;">
+            <a href="index.html" class="cta-button primary">
+                <i class="fas fa-home"></i> Volver al Inicio
+            </a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content" style="text-align: center;">
+                <div class="footer-logo">
+                    <span class="logo-text">Totodrilo.<span class="logo-accent">tech</span></span>
+                    <p>Automatización con IA para E-commerce</p>
+                </div>
+                <div class="footer-links" style="display: flex; justify-content: center; gap: 2rem; margin-top: 1.5rem; flex-wrap: wrap;">
+                    <a href="index.html">Inicio</a>
+                    <a href="index.html#servicios">Servicios</a>
+                    <a href="index.html#contacto">Contacto</a>
+                    <a href="politica-privacidad.html">Política de Privacidad</a>
+                    <a href="https://www.instagram.com/totodrilo.ia/" target="_blank">Instagram</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Totodrilo.tech. Hecho con 💜 en Buenos Aires, Argentina 🇦🇷</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
