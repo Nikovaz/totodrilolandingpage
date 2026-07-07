@@ -2576,3 +2576,26 @@ body::after {
         transform: translateY(-10px);
     }
 }
+
+.testimonial-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 1.5rem;
+}
+
+.testimonial-tag {
+    font-size: 0.75rem;
+    font-weight: 600;
+    background: rgba(139, 92, 246, 0.1);
+    color: var(--primary);
+    padding: 4px 10px;
+    border-radius: 12px;
+    border: 1px solid rgba(139, 92, 246, 0.2);
+}
+
+.testimonial-tag.exclusive {
+    background: rgba(6, 214, 160, 0.1);
+    color: var(--accent);
+    border: 1px solid rgba(6, 214, 160, 0.2);
+}
