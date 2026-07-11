@@ -1,0 +1,572 @@
+/* ==========================================================================
+   Totodrilo IA - Brand Color Tokens & Reset
+   ========================================================================== */
+:root {
+  /* HSL Color System */
+  --bg-dark: 220 25% 6%;
+  --card-bg: 220 20% 12%;
+  --text-primary: 0 0% 100%;
+  --text-secondary: 220 15% 75%;
+  
+  /* Brand Accent: Crocodile Neon Green / Cyan */
+  --accent-green-hsl: 150 90% 50%;
+  --accent-cyan-hsl: 180 90% 50%;
+  
+  --accent-green: hsl(var(--accent-green-hsl));
+  --accent-cyan:  hsl(var(--accent-cyan-hsl));
+  
+  --gradient-accent: linear-gradient(135deg, var(--accent-green), var(--accent-cyan));
+  --gradient-glow: linear-gradient(135deg, rgba(0, 255, 128, 0.15), rgba(0, 229, 255, 0.15));
+  
+  --radius-lg: 20px;
+  --radius-md: 12px;
+  --transition-smooth: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: hsl(var(--bg-dark));
+  color: hsl(var(--text-primary));
+  line-height: 1.6;
+  overflow-x: hidden;
+  position: relative;
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+/* ==========================================================================
+   Background Ambient Light Glows
+   ========================================================================== */
+.bg-glow-1, .bg-glow-2 {
+  position: fixed;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  filter: blur(140px);
+  z-index: -1;
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.bg-glow-1 {
+  top: -10%;
+  left: -10%;
+  background: radial-gradient(circle, var(--accent-green) 0%, transparent 70%);
+}
+
+.bg-glow-2 {
+  bottom: -10%;
+  right: -10%;
+  background: radial-gradient(circle, var(--accent-cyan) 0%, transparent 70%);
+}
+
+/* ==========================================================================
+   Layout Wrapper
+   ========================================================================== */
+.container {
+  max-width: 620px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ==========================================================================
+   Header Profile Section
+   ========================================================================== */
+.profile-header {
+  text-align: center;
+  margin-bottom: 35px;
+  animation: fadeInDown 0.8s ease;
+}
+
+.avatar-container {
+  position: relative;
+  width: 110px;
+  height: 110px;
+  margin: 0 auto 20px;
+}
+
+#totodrilo-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid var(--accent-green);
+  box-shadow: 0 8px 32px rgba(0, 255, 128, 0.2);
+  position: relative;
+  z-index: 2;
+}
+
+.avatar-glow {
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: var(--gradient-accent);
+  filter: blur(8px);
+  z-index: 1;
+  opacity: 0.5;
+  animation: pulseGlow 3s infinite alternate;
+}
+
+.profile-header h1 {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800;
+  font-size: 2.2rem;
+  letter-spacing: -0.5px;
+  margin-bottom: 8px;
+}
+
+.profile-header h1 .highlight {
+  background: var(--gradient-accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#brand-tagline {
+  font-size: 0.95rem;
+  color: hsl(var(--text-secondary));
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.pulse {
+  color: var(--accent-green);
+  animation: pulseBeat 1.8s infinite;
+}
+
+/* ==========================================================================
+   Link Cards Section (Glassmorphism & Micro-animations)
+   ========================================================================== */
+.links-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 45px;
+  animation: fadeInUp 0.8s ease;
+}
+
+.link-card {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 18px 24px;
+  border-radius: var(--radius-lg);
+  color: hsl(var(--text-primary));
+  transition: var(--transition-smooth);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.link-card:hover {
+  transform: translateY(-4px) scale(1.01);
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(0, 255, 128, 0.4);
+  box-shadow: 0 10px 30px rgba(0, 255, 128, 0.08);
+}
+
+.link-icon {
+  font-size: 1.6rem;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  margin-right: 20px;
+  flex-shrink: 0;
+  color: var(--accent-cyan);
+}
+
+.whatsapp-color {
+  color: #25D366;
+  background: rgba(37, 211, 102, 0.08);
+}
+
+.instagram-color {
+  color: #E1306C;
+  background: rgba(225, 48, 108, 0.08);
+}
+
+.link-content {
+  flex-grow: 1;
+}
+
+.link-content h3 {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.link-content p {
+  font-size: 0.85rem;
+  color: hsl(var(--text-secondary));
+}
+
+.arrow-icon {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.3);
+  transition: var(--transition-smooth);
+}
+
+.link-card:hover .arrow-icon {
+  color: var(--accent-green);
+  transform: translateX(4px);
+}
+
+/* Highlight / Premium Call to Action Link */
+.highlight-card {
+  background: linear-gradient(135deg, rgba(0, 255, 128, 0.05) 0%, rgba(0, 229, 255, 0.05) 100%);
+  border: 1px solid rgba(0, 255, 128, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.highlight-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.08),
+    transparent
+  );
+  transition: 0.5s;
+  z-index: 1;
+}
+
+.highlight-card:hover::before {
+  left: 100%;
+  transition: 0.8s ease-in-out;
+}
+
+.highlight-card .link-icon {
+  background: var(--gradient-accent);
+  color: hsl(var(--bg-dark));
+  box-shadow: 0 4px 15px rgba(0, 255, 128, 0.2);
+}
+
+/* ==========================================================================
+   Pricing Cards Section
+   ========================================================================== */
+.pricing-section {
+  width: 100%;
+  margin-bottom: 40px;
+  animation: fadeInUp 0.9s ease;
+}
+
+.section-title {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.section-subtitle {
+  text-align: center;
+  font-size: 0.9rem;
+  color: hsl(var(--text-secondary));
+  margin-bottom: 25px;
+}
+
+.pricing-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.plan-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  position: relative;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: var(--transition-smooth);
+}
+
+.plan-card:hover {
+  border-color: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+}
+
+.plan-card.recommended {
+  border: 2px solid var(--accent-green);
+  box-shadow: 0 10px 40px rgba(0, 255, 128, 0.06);
+  background: rgba(0, 255, 128, 0.02);
+}
+
+.popular-tag {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: var(--gradient-accent);
+  color: hsl(var(--bg-dark));
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 20px;
+  letter-spacing: 0.5px;
+}
+
+.plan-header h4 {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--accent-cyan);
+}
+
+.plan-card.recommended .plan-header h4 {
+  color: var(--accent-green);
+}
+
+.price {
+  font-family: 'Outfit', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 4px;
+  display: flex;
+  align-items: baseline;
+}
+
+.price span {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-right: 2px;
+}
+
+.price small {
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: hsl(var(--text-secondary));
+  margin-left: 4px;
+}
+
+.setup-fee {
+  font-size: 0.8rem;
+  color: hsl(var(--text-secondary));
+  font-style: italic;
+  margin-top: -2px;
+  margin-bottom: 6px;
+}
+
+.limit {
+  font-size: 0.85rem;
+  color: var(--accent-green);
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+
+.plan-features {
+  list-style: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding-top: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.plan-features li {
+  font-size: 0.85rem;
+  color: hsl(var(--text-secondary));
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.text-green {
+  color: var(--accent-green);
+}
+
+/* ==========================================================================
+   Footer Section
+   ========================================================================== */
+.profile-footer {
+  text-align: center;
+  padding: 30px 0 10px;
+  width: 100%;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  margin-top: 20px;
+  animation: fadeIn 1s ease;
+}
+
+.profile-footer p {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+/* ==========================================================================
+   Animations
+   ========================================================================== */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes pulseGlow {
+  from { transform: scale(0.98); opacity: 0.4; }
+  to { transform: scale(1.02); opacity: 0.6; }
+}
+
+@keyframes pulseBeat {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+/* Responsive Scaling for Tablets/Desktops */
+@media (min-width: 480px) {
+  .pricing-cards {
+    flex-direction: column;
+  }
+}
+
+/* Custom Linktree Styles for Nico */
+.welcome-box {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 20px;
+  padding: 20px 24px;
+  margin: 20px auto 0;
+  text-align: left;
+  max-width: 480px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.welcome-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: hsl(var(--text-primary));
+  line-height: 1.4;
+}
+
+.projects-bullet-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 16px;
+  padding-left: 5px;
+}
+
+.projects-bullet-list li {
+  font-size: 0.9rem;
+  color: hsl(var(--text-secondary));
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.welcome-footer {
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-align: center;
+  color: var(--accent-green);
+  margin-top: 10px;
+}
+
+.link-img-wrapper {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 20px;
+  flex-shrink: 0;
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.link-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.link-content-center {
+  flex-grow: 1;
+  text-align: left;
+}
+
+.link-content-center h3 {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Hover highlights for brands */
+.link-totodrilo:hover {
+  border-color: rgba(0, 255, 128, 0.5);
+  box-shadow: 0 10px 30px rgba(0, 255, 128, 0.15);
+  background: rgba(0, 255, 128, 0.04);
+}
+
+.link-nacha:hover {
+  border-color: rgba(240, 86, 227, 0.5);
+  box-shadow: 0 10px 30px rgba(240, 86, 227, 0.15);
+  background: rgba(240, 86, 227, 0.04);
+}
+
+.link-nnn:hover {
+  border-color: rgba(229, 200, 97, 0.5);
+  box-shadow: 0 10px 30px rgba(229, 200, 97, 0.15);
+  background: rgba(229, 200, 97, 0.04);
+}
+
