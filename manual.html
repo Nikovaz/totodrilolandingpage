@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manual de Operaciones & SOP | Totodrilo IA</title>
+  <meta name="description" content="Guía oficial de uso, carga de datos en Google Sheets, nombrado de imágenes para Google Drive y reglas operativas de Totodrilo IA.">
+  
+  <!-- Google Fonts: Outfit & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+    :root {
+      --bg-dark: #090D16;
+      --card-bg: #111827;
+      --card-border: rgba(139, 92, 246, 0.2);
+      --accent-purple: #8B5CF6;
+      --accent-cyan: #06B6D4;
+      --accent-green: #10B981;
+      --accent-amber: #F59E0B;
+      --text-main: #F3F4F6;
+      --text-muted: #9CA3AF;
+      --sidebar-width: 280px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      line-height: 1.6;
+      display: flex;
+      min-height: 100vh;
+    }
+
+    /* Background Ambient Glow */
+    .bg-glow {
+      position: fixed;
+      width: 400px;
+      height: 400px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(139, 92, 246, 0.15) 0%, rgba(0, 0, 0, 0) 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+    .bg-glow-1 { top: -100px; left: -100px; }
+    .bg-glow-2 { bottom: -100px; right: -100px; background: radial-gradient(circle, rgba(6, 182, 212, 0.15) 0%, rgba(0, 0, 0, 0) 70%); }
+
+    /* Sidebar Navigation */
+    aside.sidebar {
+      width: var(--sidebar-width);
+      background: #0D1322;
+      border-right: 1px solid var(--card-border);
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      display: flex;
+      flex-direction: column;
+      padding: 1.5rem;
+      z-index: 10;
+      overflow-y: auto;
+    }
+
+    .brand-area {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 2rem;
+      text-decoration: none;
+    }
+
+    .brand-area img {
+      width: 40px;
+      height: 40px;
+      object-fit: contain;
+    }
+
+    .brand-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: #FFF;
+    }
+
+    .brand-title span {
+      color: var(--accent-cyan);
+    }
+
+    .nav-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+      margin: 1rem 0 0.5rem;
+    }
+
+    .nav-menu {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+    }
+
+    .nav-menu a {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.65rem 0.85rem;
+      color: var(--text-muted);
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: all 0.2s ease;
+    }
+
+    .nav-menu a:hover, .nav-menu a.active {
+      background: rgba(139, 92, 246, 0.15);
+      color: #FFF;
+      border-left: 3px solid var(--accent-purple);
+    }
+
+    .nav-menu a i {
+      width: 18px;
+      text-align: center;
+    }
+
+    /* Main Layout */
+    main.content {
+      margin-left: var(--sidebar-width);
+      flex: 1;
+      padding: 2.5rem 3rem;
+      max-width: 1100px;
+      z-index: 1;
+    }
+
+    header.doc-header {
+      margin-bottom: 3rem;
+      border-bottom: 1px solid var(--card-border);
+      padding-bottom: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .doc-title-box h1 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 2.2rem;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+      background: linear-gradient(135deg, #FFF 30%, var(--accent-cyan) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .doc-title-box p {
+      color: var(--text-muted);
+      font-size: 1rem;
+    }
+
+    .badge-status {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(16, 185, 129, 0.15);
+      color: var(--accent-green);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      padding: 0.35rem 0.75rem;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
+    /* Module Section Styles */
+    section.module-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 2rem;
+      margin-bottom: 2.5rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      scroll-margin-top: 2rem;
+    }
+
+    .module-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      padding-bottom: 1rem;
+    }
+
+    .module-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      background: rgba(139, 92, 246, 0.2);
+      color: var(--accent-purple);
+    }
+
+    .module-card.optional .module-icon {
+      background: rgba(245, 158, 11, 0.2);
+      color: var(--accent-amber);
+    }
+
+    .module-title h2 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #FFF;
+    }
+
+    .module-title .tag {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 0.15rem 0.5rem;
+      border-radius: 4px;
+      margin-left: 0.5rem;
+    }
+    .tag-core { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
+    .tag-addon { background: rgba(245, 158, 11, 0.2); color: var(--accent-amber); }
+
+    /* Content Typography & Boxes */
+    h3 {
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--accent-cyan);
+      margin: 1.5rem 0 0.75rem;
+    }
+
+    ul, ol {
+      padding-left: 1.25rem;
+      margin-bottom: 1rem;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+      color: #E5E7EB;
+    }
+
+    .alert-box {
+      border-left: 4px solid var(--accent-purple);
+      background: rgba(139, 92, 246, 0.08);
+      padding: 1rem 1.25rem;
+      border-radius: 0 8px 8px 0;
+      margin: 1.25rem 0;
+      font-size: 0.95rem;
+    }
+    .alert-box.caution {
+      border-left-color: #EF4444;
+      background: rgba(239, 68, 68, 0.08);
+    }
+    .alert-box.important {
+      border-left-color: var(--accent-cyan);
+      background: rgba(6, 182, 212, 0.08);
+    }
+
+    .code-box {
+      background: #090D16;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 0.85rem 1.1rem;
+      border-radius: 8px;
+      font-family: monospace;
+      font-size: 0.95rem;
+      color: var(--accent-cyan);
+      display: inline-block;
+      margin: 0.5rem 0;
+    }
+
+    /* Print / Responsive */
+    @media (max-width: 768px) {
+      aside.sidebar { display: none; }
+      main.content { margin-left: 0; padding: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="bg-glow bg-glow-1"></div>
+  <div class="bg-glow bg-glow-2"></div>
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <a href="https://totodrilo.tech" class="brand-area">
+      <img src="./images/LogoTotodrilo-Photoroom.png" alt="Totodrilo Logo">
+      <div class="brand-title">Totodrilo <span>SOP</span></div>
+    </a>
+
+    <div class="nav-label">Módulos de Operación</div>
+    <ul class="nav-menu">
+      <li><a href="#modulo1" class="active"><i class="fa-solid fa-table"></i> 1. Stock y Precios</a></li>
+      <li><a href="#modulo2"><i class="fa-solid fa-calendar-days"></i> 2. Auto-Publicador</a></li>
+      <li><a href="#modulo3"><i class="fa-solid fa-comments"></i> 3. Comentarios y DMs</a></li>
+      <li><a href="#modulo4"><i class="fa-solid fa-user-shield"></i> 4. Handoff e Ignorados</a></li>
+      <li><a href="#modulo5"><i class="fa-solid fa-receipt"></i> 5. Pagos y Señas (Opcional)</a></li>
+      <li><a href="#modulo6"><i class="fa-solid fa-shield-halved"></i> 6. Coexistencia YCloud</a></li>
+    </ul>
+
+    <div style="margin-top: auto; padding-top: 1.5rem; border-top: 1px solid var(--card-border);">
+      <a href="https://wa.me/5491130960114" target="_blank" style="color: var(--text-muted); text-decoration: none; font-size: 0.85rem; display: flex; align-items: center; gap: 0.5rem;">
+        <i class="fa-brands fa-whatsapp" style="color: var(--accent-green);"></i> Soporte Totodrilo IA
+      </a>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="content">
+
+    <header class="doc-header">
+      <div class="doc-title-box">
+        <h1>Manual de Operaciones & SOP</h1>
+        <p>Guía oficial de carga de datos, nomenclaturas y mejores prácticas para clientes de Totodrilo IA.</p>
+      </div>
+      <div class="badge-status">
+        <i class="fa-solid fa-circle-check"></i> Documento Oficial v2.0
+      </div>
+    </header>
+
+    <!-- Módulo 1 -->
+    <section id="modulo1" class="module-card">
+      <div class="module-header">
+        <div class="module-icon"><i class="fa-solid fa-table"></i></div>
+        <div class="module-title">
+          <h2>MÓDULO 1: Gestión del Chatbot (Sheets)</h2>
+          <span class="tag tag-core">Módulo Principal</span>
+        </div>
+      </div>
+
+      <p>El cerebro de tu Inteligencia Artificial lee directamente tu planilla de Google Sheets. Todo cambio que hagas en la planilla se reflejará al instante en las respuestas del chatbot.</p>
+
+      <div class="alert-box caution">
+        <strong>⚠️ Regla de Oro para la Planilla:</strong><br>
+        <strong>NUNCA modifiques, cambies el nombre ni borres las columnas de la Fila 1 (Encabezados).</strong><br>
+        Nombres como <code>Num de foto</code>, <code>Rubro</code>, <code>Medida</code>, <code>Artículo</code>, <code>Diseño</code>, <code>Color</code>, <code>Stock</code>, <code>Precio publico</code>, <code>Caracteristicas</code> e <code>Incluye</code> deben mantenerse idénticos.
+      </div>
+
+      <h3>1.1 Actualización de Precios</h3>
+      <ul>
+        <li><strong>Formato permitido:</strong> Ingresá únicamente valores numéricos limpios o con formato estándar de moneda (ejemplo: <code>130000</code> o <code>$130.000,00</code>).</li>
+        <li><strong>Evitar:</strong> No agregues notas como <em>"preguntar"</em>, <em>"varios"</em> o <em>"a confirmar"</em> en la columna de precios. Si un precio está cambiando, marcá el stock como <code>No disponible</code>.</li>
+      </ul>
+
+      <h3>1.2 Actualización de Stock</h3>
+      <ul>
+        <li>Para indicar disponible: colocar la palabra exacta <code>Disponible</code>.</li>
+        <li>Para indicar agotado: colocar la palabra exacta <code>No disponible</code>.</li>
+        <li>La IA <strong>nunca</strong> ofrecerá productos marcados como <code>No disponible</code>.</li>
+      </ul>
+    </section>
+
+    <!-- Módulo 2 -->
+    <section id="modulo2" class="module-card">
+      <div class="module-header">
+        <div class="module-icon"><i class="fa-solid fa-calendar-days"></i></div>
+        <div class="module-title">
+          <h2>MÓDULO 2: Auto-Publicador Social Media</h2>
+          <span class="tag tag-core">Módulo de Publicación</span>
+        </div>
+      </div>
+
+      <p>Si contás con el módulo de publicación autónoma, tu sistema publicará automáticamente tus posteos y stories según la fecha indicada en el nombre del archivo en Google Drive.</p>
+
+      <h3>2.1 Estructura de Carpetas en Google Drive</h3>
+      <ul>
+        <li>📁 <code>01. FEED Y REELS</code>: Para fotos cuadradas o verticales (4:5 / 1:1) y videos Reels (<code>.mp4</code>).</li>
+        <li>📁 <code>02. STORIES</code>: Para imágenes e Historias verticales (<strong>formato 9:16 obligatorio</strong>).</li>
+      </ul>
+
+      <div class="alert-box important">
+        <strong>Fórmula de Nombre de Archivo:</strong><br>
+        <div class="code-box">Num[Número_de_Foto]_[DÍA].[MES].[extensión]</div><br>
+        • Ejemplo Feed: <code>Num196_17.07.jpg</code> (Publica el 17 de Julio con los datos de la foto 196).<br>
+        • Ejemplo Story: <code>Num196_17.07.mp4</code> o <code>17.07.jpg</code>.
+      </div>
+
+      <h3>2.2 Cruce Automático con el Catálogo</h3>
+      <p>Cuando el auto-publicador selecciona <code>Num196_17.07.jpg</code>, extrae el número <strong>196</strong>, busca en tu Google Sheets todas las filas con <code>Num de foto = 196</code>, y la IA redacta el copy de Instagram con los precios y datos reales automáticamente.</p>
+    </section>
+
+    <!-- Módulo 3 -->
+    <section id="modulo3" class="module-card">
+      <div class="module-header">
+        <div class="module-icon"><i class="fa-solid fa-comments"></i></div>
+        <div class="module-title">
+          <h2>MÓDULO 3: Respuestas a Comentarios y DMs</h2>
+          <span class="tag tag-core">Omnicanal</span>
+        </div>
+      </div>
+
+      <h3>3.1 Única Fuente de Verdad</h3>
+      <p>El bot que responde los comentarios públicos y los mensajes directos (DM) lee <strong>exactamente la misma planilla de Google Sheets del Módulo 1</strong>. Si cambiás un precio en Sheets, responderá el precio nuevo de inmediato.</p>
+
+      <h3>3.2 Flujo de Conversión</h3>
+      <ol>
+        <li><strong>Comentario Público:</strong> Responde amablemente (ej: <em>"¡Hola! Te enviamos la info por mensaje privado 📩"</em>).</li>
+        <li><strong>Derivación a DM:</strong> Abre chat privado enviando precios y fotos.</li>
+        <li><strong>Cierre en WhatsApp:</strong> Si muestra intención de compra, le envía el enlace directo a WhatsApp.</li>
+      </ol>
+    </section>
+
+    <!-- Módulo 4 -->
+    <section id="modulo4" class="module-card">
+      <div class="module-header">
+        <div class="module-icon"><i class="fa-solid fa-user-shield"></i></div>
+        <div class="module-title">
+          <h2>MÓDULO 4: Modo Admin e Ignorados</h2>
+          <span class="tag tag-core">Handoff Humano</span>
+        </div>
+      </div>
+
+      <p>Te permite tomar el control manual de cualquier chat de manera <strong>individual y permanente</strong> sin apagar el bot para los demás clientes.</p>
+
+      <h3>4.1 Pausar la IA en un Chat (Lista de Ignorados)</h3>
+      <ul>
+        <li>Al enviar la palabra clave de apagar (ej: <code>#pausa</code>), el sistema agrega únicamente a ese contacto a la <strong>Lista de Ignorados</strong>.</li>
+        <li>La IA dejará de responderle a ese cliente de forma <strong>permanente</strong> hasta que el humano lo decida.</li>
+      </ul>
+
+      <h3>4.2 Reactivar la IA para el Contacto</h3>
+      <ul>
+        <li>El bot <strong>NO</strong> se reactiva solo con el tiempo (para darte control total).</li>
+        <li>Para reactivarlo, enviá la palabra clave de encender (ej: <code>#bot</code>). El contacto sale de la Lista de Ignorados y la IA vuelve a atenderlo.</li>
+      </ul>
+    </section>
+
+    <!-- Módulo 5 -->
+    <section id="modulo5" class="module-card optional">
+      <div class="module-header">
+        <div class="module-icon"><i class="fa-solid fa-receipt"></i></div>
+        <div class="module-title">
+          <h2>MÓDULO 5: Pagos y Señas</h2>
+          <span class="tag tag-addon">Módulo Opcional</span>
+        </div>
+      </div>
+
+      <h3>5.1 Modalidad Híbrida (Estándar / Recomendada)</h3>
+      <p>La IA atiende al cliente, toma el pedido y le avisa al equipo: <em>"¡Venta lista para cerrar con [Cliente]!"</em>. El vendedor toma el control, envía Alias/CBU y verifica el dinero en su banco.</p>
+
+      <h3>5.2 Modalidad 100% Automática con OCR (Opcional)</h3>
+      <p>Si activás este add-on, la IA envía el CBU y escanea el comprobante subido por el cliente mediante visión inteligente (OCR) validando el cobro o seña del 10%.</p>
+    </section>
+
+    <!-- Módulo 6 -->
+    <section id="modulo6" class="module-card">
+      <div class="module-header">
+        <div class="module-icon"><i class="fa-solid fa-shield-halved"></i></div>
+        <div class="module-title">
+          <h2>MÓDULO 6: Coexistencia YCloud & WhatsApp</h2>
+          <span class="tag tag-core">Infraestructura Oficial</span>
+        </div>
+      </div>
+
+      <h3>6.1 Uso Simultáneo sin Interrupciones</h3>
+      <p>Tu aplicación de WhatsApp Business sigue funcionando en tu celular o web como siempre. Podés responder manualmente a cualquier cliente cuando quieras.</p>
+
+      <h3>6.2 Sin Costos Extra por Respuesta Humana</h3>
+      <p>Al estar en Modo Coexistencia, los mensajes que respondés manualmente desde la app de tu celular <strong>no generan costos adicionales ni requieren plantillas comerciales de Meta</strong>.</p>
+    </section>
+
+  </main>
+
+  <script>
+    // Simple smooth scroll and active link toggle
+    const navLinks = document.querySelectorAll('.nav-menu a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        navLinks.forEach(l => l.classList.remove('active'));
+        link.classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>
